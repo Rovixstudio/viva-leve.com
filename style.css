@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 
 * {
   margin: 0;
@@ -7,130 +7,133 @@
 }
 
 body, html {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #4a148c; /* roxo escuro */
-  color: #eee;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #6a0dad, #9b59b6);
+  color: #f0eafc;
+  height: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  position: relative;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .hero {
   position: relative;
-  height: 100vh;
-  background: linear-gradient(135deg, #6a1b9a, #9c27b0);
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden;
   padding: 0 20px;
-  flex-direction: column;
-  color: #fff;
   z-index: 1;
 }
 
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  pointer-events: none;
+.hero .content h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #f3e8ff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
-.content h1 {
-  font-size: 6rem;
-  letter-spacing: 0.1em;
-  margin-bottom: 20px;
+.hero .content p {
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #d1c4e9;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
-.content p {
-  font-size: 1.8rem;
-  max-width: 600px;
+main {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 section {
-  padding: 60px 20px;
-  background-color: #311b92;
+  margin-bottom: 50px;
   text-align: center;
-  margin: 20px auto;
-  border-radius: 8px;
-  max-width: 900px;
 }
 
 section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #d1c4e9;
-  letter-spacing: 0.05em;
-}
-
-section p, section ul {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #ddd;
-}
-
-section ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-section ul li {
-  margin: 10px 0;
-}
-
-section ul li a {
-  color: #ce93d8;
-  text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  letter-spacing: 0.1em;
+  color: #f0eafc;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
-section ul li a:hover {
-  color: #ba68c8;
+section p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #d1c4e9;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-/* Botões fixos no canto inferior direito */
-.floating-button {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+.cards {
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  color: white;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px 40px;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.3rem;
   text-decoration: none;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  z-index: 10000;
-}
-
-.floating-button.whatsapp {
-  background-color: #25d366; /* verde whatsapp */
-  right: 85px; /* desloca para esquerda para não sobrepor o insta */
-}
-
-.floating-button.whatsapp:hover {
-  background-color: #128c4a;
-  box-shadow: 0 8px 20px rgba(18, 140, 74, 0.6);
-}
-
-.floating-button.instagram {
-  background-color: #833ab4; /* roxo insta */
-}
-
-.floating-button.instagram:hover {
-  background-color: #5a2280;
-  box-shadow: 0 8px 20px rgba(90, 34, 128, 0.6);
-}
-
-.emoji {
-  pointer-events: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
   user-select: none;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  padding: 20px 0;
+  color: #ddd6f3;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.contact-icons {
+  margin-bottom: 10px;
+}
+
+.contact-icons a {
+  font-size: 2.5rem;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-icons a:hover {
+  color: #d1c4e9;
+  transform: scale(1.2);
 }

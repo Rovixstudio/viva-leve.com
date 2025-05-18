@@ -5,42 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Receitas Saudáveis</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="hero">
-    <div id="particles-js"></div>
+
+  <div id="particles-js"></div>
+
+  <header class="hero">
     <div class="content">
       <h1>Receitas Saudáveis</h1>
-      <p>Descubra as melhores receitas para uma vida mais leve e saborosa!</p>
+      <p>Delícias nutritivas para sua vida saudável</p>
     </div>
-  </div>
+  </header>
 
-  <section class="recipes">
-    <h2>Receitas</h2>
-    <p>Explore nossas receitas variadas para seu dia a dia.</p>
-  </section>
+  <main>
+    <section class="recipes">
+      <h2>Receitas</h2>
+      <p>Descubra receitas equilibradas, saborosas e fáceis de preparar.</p>
+    </section>
 
-  <section class="portfolio">
-    <h2>Portfólio</h2>
-    <ul>
-      <li><a href="receitas.html">Receitas</a></li>
-      <li><a href="sucos.html">Sucos</a></li>
-      <li><a href="pratos.html">Pratos</a></li>
-    </ul>
-  </section>
+    <section class="portfolio">
+      <h2>Portfólio</h2>
+      <div class="cards">
+        <a href="receitas.html" class="card">Receitas</a>
+        <a href="sucos.html" class="card">Sucos</a>
+        <a href="pratos.html" class="card">Pratos</a>
+      </div>
+    </section>
+  </main>
 
-  <!-- Botão WhatsApp fixo -->
-  <a href="https://wa.me/5562999580521" target="_blank" class="floating-button whatsapp" aria-label="WhatsApp">
-    <span class="emoji">📱</span>
-  </a>
+  <footer>
+    <div class="contact-icons">
+      <a href="https://wa.me/5562999580521" target="_blank" aria-label="WhatsApp" class="whatsapp-btn">📱</a>
+      <a href="https://instagram.com/rodrigohx_12" target="_blank" aria-label="Instagram" class="instagram-btn">📸</a>
+      <a href="https://wa.me/5562991125182" target="_blank" aria-label="WhatsApp Alternativo" class="whatsapp-alt-btn">📱</a>
+    </div>
+    <p>© 2025 Receitas Saudáveis</p>
+  </footer>
 
-  <!-- Botão Instagram fixo -->
-  <a href="https://instagram.com/rodrigohx_12" target="_blank" class="floating-button instagram" aria-label="Instagram">
-    <span class="emoji">📸</span>
-  </a>
-
-  <script src="particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="script.js"></script>
+
 </body>
 </html>
