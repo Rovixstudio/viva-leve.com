@@ -1,26 +1,24 @@
-// Animação de scroll (Scroll Reveal)
-window.addEventListener("scroll", function () {
-  const reveals = document.querySelectorAll(".reveal");
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const elementTop = reveals[i].getBoundingClientRect().top;
-    const elementVisible = 100;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("visible");
-    }
-  }
-});
-
-// Executa também ao carregar a página (caso elementos já estejam visíveis)
-window.addEventListener("load", function () {
-  const reveals = document.querySelectorAll(".reveal");
-  for (let i = 0; i < reveals.length; i++) {
-    const elementTop = reveals[i].getBoundingClientRect().top;
-    const elementVisible = 100;
-
-    if (elementTop < window.innerHeight - elementVisible) {
-      reveals[i].classList.add("visible");
-    }
-  }
-});
+window.onload = function() {
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 700 } },
+      color: { value: "#d1c4e9" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5, random: false },
+      size: { value: 4, random: true },
+      move: { enable: true, speed: 2, direction: "none", out_mode: "out" }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "repulse" },
+        onclick: { enable: true, mode: "push" }
+      },
+      modes: {
+        repulse: { distance: 120 },
+        push: { particles_nb: 4 }
+      }
+    },
+    retina_detect: true
+  });
+};
